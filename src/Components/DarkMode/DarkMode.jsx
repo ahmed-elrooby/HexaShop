@@ -21,19 +21,17 @@ const DarkMode = () => {
     };
 
     return (
-        <>
-            <div 
-                className='cursor-pointer select-none relative rounded-full p-[2px] flex justify-between items-center text-center border-2' 
-                onClick={() => changeMode()}
-            >
-                <div className='text-[18px]'>
-                    🌙🌚
-                </div>
-                <div 
-                    className={`w-[25px] left:${dark?'2px':'auto'} right:${dark?'auto':'2px'} aspect-square absolute bg-[var(--primary)] rounded-full transition-all duration-300`}
-                />
+        <div 
+            className='cursor-pointer select-none relative rounded-full p-[2px] flex justify-between items-center text-center border-2' 
+            onClick={() => changeMode()}
+        >
+            <div className='text-[18px]'>
+                🌙🌚
             </div>
-        </>
+            <div 
+                className={`w-[25px] aspect-square absolute bg-[var(--primary)] rounded-full transition-all duration-300 ${dark ? 'right-[2px]' : 'left-[2px]'}`}
+            />
+        </div>
     );
 };
 
