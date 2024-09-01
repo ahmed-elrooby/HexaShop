@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+ --primary:#00BFA6;
+  
+}
+input{
+  box-shadow:none;
+}
+body,html{
+  transition:all 0.5s ease-in-out;
+    margin: 0;
+    padding: 0;
+  
+}
+*::selection {
+  background-color: #00BFA6 !important;
+  color: white;
+}
+body.dark {
+  background-color:#111;
+  color:#bbb;
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .primary{
+    background:#53c28b;
+  }
+  
+}
